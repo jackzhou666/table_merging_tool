@@ -1,4 +1,4 @@
-# Excel 表格合并工具
+# Excel表格合并工具
 
 ## 功能介绍
 
@@ -27,17 +27,17 @@ pip install pyinstaller pandas openpyxl
 在命令行进入项目目录，执行以下命令：
 
 ```bash
-pyinstaller --onefile --windowed --name "Excel打包工具" merge_excel.py
+pyinstaller --onefile --windowed --name "Excel表格合并工具" merge_excel.py
 ```
 
 - `--onefile` 参数表示打包成单一的 exe 文件。
 - `--windowed` 参数让程序运行时不弹出命令行窗口，适合图形界面工具。
-- `--name "Excel打包工具"` 指定生成的 exe 文件名为 `Excel打包工具.exe`。
-- 打包完成后，`dist` 文件夹下会生成 `Excel打包工具.exe`。
+- `--name "Excel表格合并工具"` 指定生成的 exe 文件名为 `Excel表格合并工具.exe`。
+- 打包完成后，`dist` 文件夹下会生成 `Excel表格合并工具.exe`。
 
 ### 3. 运行方法
 
-将需要合并的 Excel 或 CSV 文件与 `Excel打包工具.exe` 放在同一目录下，双击运行 exe 文件，按照提示操作即可。
+将需要合并的 Excel 或 CSV 文件与 `Excel表格合并工具.exe` 放在同一目录下，双击运行 exe 文件，按照提示操作即可。
 
 ### 4. 注意事项
 

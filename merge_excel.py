@@ -50,7 +50,7 @@ def batch_standardize(folder, result_text, ext):
 
 def merge_excels(folder, result_text, ext):
     try:
-        dt_str = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+        dt_str = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         if ext == '.csv':
             output_path = os.path.join(folder, f"合并结果_{dt_str}.csv")
             file_paths = get_files_by_ext(folder, ext)
