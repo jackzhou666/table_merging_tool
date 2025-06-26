@@ -2,11 +2,12 @@
 
 ## 功能介绍
 
-本工具用于批量合并多个 Excel 文件（.xlsx），适用于需要将多个表格数据整合到一个文件中的场景。主要功能如下：
+本工具用于批量合并多个 Excel 文件（.xlsx）或 CSV 文件，适用于需要将多个表格数据整合到一个文件中的场景。主要功能如下：
 
-- 支持选择多个 Excel 文件进行合并。
-- 自动识别并合并所有表格的内容，支持多表头、不同列数的情况。
-- 合并结果可导出为新的 Excel 文件，方便后续处理。
+- 支持选择多个 Excel（.xlsx）或 CSV 文件进行合并（不能混合合并）。
+- xlsx 文件自动标准化，csv 文件直接合并。
+- 合并结果格式与输入一致。
+- 合并结果可导出为新的 Excel 或 CSV 文件，方便后续处理。
 - 操作简单，无需复杂配置，适合非技术用户。
 
 ## EXE 打包流程
@@ -26,15 +27,17 @@ pip install pyinstaller pandas openpyxl
 在命令行进入项目目录，执行以下命令：
 
 ```bash
-pyinstaller --onefile merge_excel.py
+pyinstaller --onefile --windowed --name "Excel打包工具" merge_excel.py
 ```
 
 - `--onefile` 参数表示打包成单一的 exe 文件。
-- 打包完成后，`dist` 文件夹下会生成 `merge_excel.exe`。
+- `--windowed` 参数让程序运行时不弹出命令行窗口，适合图形界面工具。
+- `--name "Excel打包工具"` 指定生成的 exe 文件名为 `Excel打包工具.exe`。
+- 打包完成后，`dist` 文件夹下会生成 `Excel打包工具.exe`。
 
 ### 3. 运行方法
 
-将需要合并的 Excel 文件与 `merge_excel.exe` 放在同一目录下，双击运行 exe 文件，按照提示操作即可。
+将需要合并的 Excel 或 CSV 文件与 `Excel打包工具.exe` 放在同一目录下，双击运行 exe 文件，按照提示操作即可。
 
 ### 4. 注意事项
 
